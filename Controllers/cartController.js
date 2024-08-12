@@ -89,7 +89,6 @@ exports.deleteCart = async(req,res)=>{
             cart.save()
             return res.status(200).json({message:"cart deleted successful"})
         }
-
     }
     catch{
         return res.status(400).json({message:e.message})

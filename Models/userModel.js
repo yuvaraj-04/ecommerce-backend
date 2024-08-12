@@ -12,6 +12,11 @@ const userschema= new mongoose.Schema({
     password:{
         type:String,
         required:true,
+    },
+    Role:{
+        type:String,
+        required:true,
+        enum:['Admin','User']
     }
 })
 userschema.pre("save",async function(next){
